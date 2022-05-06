@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Redirect">
+    <DisplayName>AM-Redirect</DisplayName>
+    <Properties/>
+    <Remove>
+        <Headers>
+            <Header name="Accept"/>
+            <Header name="Accept-Encoding"/>
+            <Header name="Accept-Language"/>
+            <Header name="Referer"/>
+            <Header name="Cookie"/>
+            <Header name="sec-ch-ua"/>
+            <Header name="sec-ch-ua-mobile"/>
+            <Header name="sec-ch-ua-platform"/>
+            <Header name="Sec-Fetch-Dest"/>
+            <Header name="Sec-Fetch-Mode"/>
+            <Header name="Sec-Fetch-Site"/>
+            <Header name="Sec-Fetch-User"/>
+            <Header name="Upgrade-Insecure-Requests"/>
+            <Header name="X-Forwarded-For"/>
+            <Header name="X-Forwarded-Port"/>
+        </Headers>
+        <Payload>true</Payload>
+    </Remove>
+    <Set>
+        <QueryParams>
+            <QueryParam name="client_id">Fu6vvIzfPgV3kqSHSMMhW4JjwMwvzuvB</QueryParam>
+            <QueryParam name="response_type">code</QueryParam>
+            <QueryParam name="redirect_uri">https://www.example.com/</QueryParam>
+            <QueryParam name="scope">openid profile email</QueryParam>
+        </QueryParams>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="https" type="request"/>
+</AssignMessage>

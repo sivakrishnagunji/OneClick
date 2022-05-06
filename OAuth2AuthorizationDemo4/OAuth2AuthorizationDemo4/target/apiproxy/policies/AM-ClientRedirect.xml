@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-ClientRedirect">
+    <DisplayName>AM-ClientRedirect</DisplayName>
+    <Set>
+        <Headers>
+            <Header name="Location">https://amer-api-partner38-dev.apigee.net/oauth2authorizationdemo4/redirect?grant_type=client_credentials</Header>
+            <Header name="Access-Control-Allow-Origin">*</Header>
+            <Header name="Access-Control-Allow-Headers">*</Header>
+            <Header name="Access-Control-Max-Age">3628800</Header>
+            <Header name="Access-Control-Allow-Methods">GET, PUT, POST, DELETE</Header>
+        </Headers>
+        <QueryParams/>
+        <StatusCode>301</StatusCode>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

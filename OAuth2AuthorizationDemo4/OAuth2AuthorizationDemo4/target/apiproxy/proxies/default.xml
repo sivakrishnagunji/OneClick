@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="RedirectToLogin">
+            <Description>RedirectToLogin</Description>
+            <Request>
+                <Step>
+                    <Name>AM-CreateCacheTemplate</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>generateLoginURL</Name>
+                </Step>
+                <Step>
+                    <Name>AM-RedirectToLogin</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/authorize") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="GetAuthCode">
+            <Description>GetAuthCode</Description>
+            <Request>
+                <Step>
+                    <Name>Assign-Message-1</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AM-ClientRedirect</Name>
+                </Step>
+                <Step>
+                    <Name>GenerateAuthorizationCode</Name>
+                </Step>
+                <Step>
+                    <Name>EV-ExtractTokenResponse</Name>
+                </Step>
+                <Step>
+                    <Name>AM-GenerateAuthCodeResponse</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/redirect") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Token">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>verifyAuthCode</Name>
+                </Step>
+                <Step>
+                    <Name>Assign-Message-1</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>GenerateAccessToken</Name>
+                </Step>
+                <Step>
+                    <Name>EV-ExtractTokenResponse</Name>
+                </Step>
+                <Step>
+                    <Name>AM-GenerateTokenResponse</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/token") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/oauth2authorizationdemo4</BasePath>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default"/>
+</ProxyEndpoint>
