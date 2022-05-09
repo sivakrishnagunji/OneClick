@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-GenerateAuthCodeResponse">
+    <DisplayName>AM-GenerateAuthCodeResponse</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="Content-Type">application/json;charset=UTF-8</Header>
+            <Header name="Cache-Control">no-store</Header>
+            <Header name="Pragma">no-cache</Header>
+        </Headers>
+        <Payload contentType="application/json;charset=UTF-8" variablePrefix="%" variableSuffix="#">
+            {
+               "authorization_code":"%accessToken#",
+    
+               "expires_in":%expiresIn#,
+               "issued_at":%issuedAt#,
+               "refresh_token":%refresh_token#,
+               "scope":%scope#
+             }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

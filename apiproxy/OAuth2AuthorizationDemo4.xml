@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="27" name="OAuth2AuthorizationDemo4">
+    <Basepaths>/oauth2authorizationdemo4</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1649865772541</CreatedAt>
+    <CreatedBy>benit.jose@infosys.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>OAuth2AuthorizationDemo4</DisplayName>
+    <LastModifiedAt>1649865772541</LastModifiedAt>
+    <LastModifiedBy>benit.jose@infosys.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:631da4c69ec9e43c54f13d671988aefc09833a19720a674eb3fe560115d876c074d357b8db0f18f0c4696cc8bf7cd56bd662885ed85edc611fd30a255694a162:ap-northeast-1</ManifestVersion>
+    <Policies>
+        <Policy>AM-ClientRedirect</Policy>
+        <Policy>AM-CreateCacheTemplate</Policy>
+        <Policy>AM-GenerateAuthCodeResponse</Policy>
+        <Policy>AM-GenerateTokenResponse</Policy>
+        <Policy>AM-Redirect</Policy>
+        <Policy>AM-RedirectToLogin</Policy>
+        <Policy>Assign-Message-1</Policy>
+        <Policy>EV-ExtractTokenResponse</Policy>
+        <Policy>EV-GetSessionInfo</Policy>
+        <Policy>GenerateAccessToken</Policy>
+        <Policy>GenerateAuthorizationCode</Policy>
+        <Policy>GenerateToken</Policy>
+        <Policy>GetAuthCode</Policy>
+        <Policy>Insert header</Policy>
+        <Policy>RedirectGetAuthorizeResponse</Policy>
+        <Policy>Service-Callout-1</Policy>
+        <Policy>generateLoginURL</Policy>
+        <Policy>verifyAuthCode</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JS-DoRedirect.js</Resource>
+        <Resource>jsc://generateLoginURL.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

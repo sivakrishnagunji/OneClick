@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables name="EV-ExtractTokenResponse" continueOnError="true">
+    <Source>response</Source>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="accessToken" type="string">
+            <JSONPath>$.access_token</JSONPath>
+        </Variable>
+        <Variable name="tokenType" type="string">
+            <JSONPath>$.token_type</JSONPath>
+        </Variable>
+        <Variable name="expiresIn" type="string">
+            <JSONPath>$.expires_in</JSONPath>
+        </Variable>
+        <Variable name="issuedAt" type="string">
+            <JSONPath>$.issued_at</JSONPath>
+        </Variable>
+        <Variable name="refresh_token" type="string">
+            <JSONPath>$.refresh_token</JSONPath>
+        </Variable>
+        <Variable name="scope" type="string">
+            <JSONPath>$.scope</JSONPath>
+        </Variable>
+    </JSONPayload>
+</ExtractVariables>
