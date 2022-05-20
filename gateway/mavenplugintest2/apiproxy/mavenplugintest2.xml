@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="mavenplugintest2">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1462679337986</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description>MavenPluginTest2</Description>
+    <DisplayName>MavenPluginTest2</DisplayName>
+    <LastModifiedAt>1462679348376</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <Policies>
+        <Policy>AssignQueryParam</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>
