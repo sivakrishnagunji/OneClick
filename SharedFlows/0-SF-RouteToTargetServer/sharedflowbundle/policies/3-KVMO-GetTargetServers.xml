@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="3-KVMO-GetTargetServers" mapIdentifier="SF-KVM-RouteToTargetServer">
+    <DisplayName>3-KVMO-GetTargetServers</DisplayName>
+    <Get assignTo="targets_endpoint_properties_default">
+        <Key>
+            <Parameter>Default</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="targets_endpoint_properties_api">
+        <Key>
+            <Parameter ref="apiproxy.name"/>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

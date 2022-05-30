@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="4-JS-SetAPICategory">
+    <DisplayName>4-JS-SetAPICategory</DisplayName>
+    <ResourceURL>jsc://InvokePolicy.js</ResourceURL>
+    <IncludeURL>jsc://SetAPICategory.js</IncludeURL>
+</Javascript>

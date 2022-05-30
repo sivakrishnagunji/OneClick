@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="1" name="0-SF-RouteToTargetServer">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1577947129039</CreatedAt>
+    <CreatedBy>jayashree_r05@infosys.com</CreatedBy>
+    <Description>Dynamic Routing to set the targetUrl based on KVM configuration and optional input variables that are set in conditional flows (targetResourcePath, targetQueryParameters)</Description>
+    <DisplayName>0-SF-RouteToTargetServer</DisplayName>
+    <LastModifiedAt>1584628039012</LastModifiedAt>
+    <LastModifiedBy>merin_jose01@infosys.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:903c1c03cdf6190c44d5988719a6a5b05b367ed2947a1722ff36aa609ce82a8610b2ab5a0ccd1526754b7c439e37253b60f29c37a29cb2986d3e44ba9b91c626:ap-northeast-1</ManifestVersion>
+    <Policies>
+        <Policy>3-KVMO-GetTargetServers</Policy>
+        <Policy>4-JS-RouteToTargetServer</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://RouteToTargetServer/InvokePolicy.js</Resource>
+        <Resource>jsc://RouteToTargetServer/RouteToTargetServer.js</Resource>
+        <Resource>spec://RouteToTargetServerSpec.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

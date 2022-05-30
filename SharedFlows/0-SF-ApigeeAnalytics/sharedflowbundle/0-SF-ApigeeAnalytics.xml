@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="3" name="0-SF-ApigeeAnalytics">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1606291298949</CreatedAt>
+    <CreatedBy>shreerangan_t@infosys.com</CreatedBy>
+    <Description>TODO - Shared Flow to collect analytics </Description>
+    <DisplayName>0-SF-ApigeeAnalytics</DisplayName>
+    <LastModifiedAt>1606736065636</LastModifiedAt>
+    <LastModifiedBy>shreerangan_t@infosys.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:df7bb96fc5bb6d8dbed788253bcb17974dd4642e5dbeeff046f182899204d1d7c901365176c2fc257c6e2a89d662c31058032a30d5a627d72cc2d6fba52e61b5:ap-northeast-1</ManifestVersion>
+    <Policies>
+        <Policy>4-JS-SetAPICategory</Policy>
+        <Policy>4-STC-CustomDimensions</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://InvokePolicy.js</Resource>
+        <Resource>jsc://SetAPICategory.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>
